@@ -51,11 +51,6 @@ function getCountryPage({
   currencies,
   languages
 }) {
-  console.log(Object.values(languages));
-  // Object.values(currencies)
-  // currencies.forEach((el) => {
-  //   console.log(el);
-  // });
   return `
     <div class="country row gx-5">
       <div class="col-lg-6 col-md-12 col-sm-12">
