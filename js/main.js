@@ -11,7 +11,7 @@ let paginationItems;
 
 let search = "";
 let activePage = 1;
-let filtered = "";
+let filtered = "All";
 
 async function getCountries() {
   try {
@@ -19,12 +19,21 @@ async function getCountries() {
 
     let countries, totalCountries;
 
-    const params = { page: activePage, limit: LIMIT, region: filtered };
+    const params = { page: activePage, limit: LIMIT };
 
     if (search) {
       const { data, total } = await customFetch(`${ENDPOINT}name/${search}`, {
         params,
       });
+      countries = data;
+      totalCountries = total;
+    } else if (filtered !== "All") {
+      const { data, total } = await customFetch(
+        `${ENDPOINT}region/${filtered}`,
+        {
+          params,
+        }
+      );
       countries = data;
       totalCountries = total;
     } else {
@@ -116,7 +125,8 @@ selectFilter.forEach((item) => {
   item.addEventListener("click", function (e) {
     e.target;
     filtered = e.target.innerText;
-    console.log(e.target.innerText);
+    // console.log(e.target.innerText);
+    console.log(filtered);
     getCountries();
   });
 });
