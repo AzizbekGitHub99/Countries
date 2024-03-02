@@ -1,0 +1,48 @@
+body {
+  background-color: #202c36;
+}
+.header {
+  background-color: #2b3844;
+  width: 100%;
+  .container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mode {
+      vertical-align: middle;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.card {
+  background-color: #2b3844;
+  color: white;
+}
+.search-input {
+  background-color: #2b3844;
+  border: none;
+  color: white;
+  &:focus {
+    background-color: #2b3844;
+    border: none;
+    color: white;
+  }
+  &::placeholder {
+    color: white;
+  }
+}
+.continents {
+  width: 200px;
+  background-color: #2b3844;
+  padding: 10px 20px;
+  button {
+    color: white;
+    &:hover {
+      background-color: #202c36;
+      color: white;
+    }
+  }
+}

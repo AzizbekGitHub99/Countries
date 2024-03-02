@@ -1,0 +1,40 @@
+body {
+  background-color: #202c36;
+}
+.header {
+  background-color: #2b3844;
+  width: 100%;
+  .container {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mode{
+      vertical-align: middle;
+      img{
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.country{
+  div{
+    color: white;
+    img{
+      width: 100%;
+    }
+    h3{
+      color: white;
+    }
+    iframe{
+      width: 100%;
+    }
+    ul{
+      li{
+        text-align: start;
+        list-style: none;
+      }
+    }
+  }
+}
