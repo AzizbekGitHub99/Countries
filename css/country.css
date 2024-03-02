@@ -34,9 +34,6 @@ body {
 .country div h3 {
   color: white;
 }
-.country div iframe {
-  width: 100%;
-}
 .country div ul li {
   text-align: start;
   list-style: none;

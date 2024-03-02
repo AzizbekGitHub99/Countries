@@ -49,8 +49,10 @@ function getCountryPage({
   capital,
   tld,
   currencies,
-  languages
+  languages,
+  maps
 }) {
+  console.log(maps.googleMaps);
   return `
     <div class="country row gx-5">
       <div class="col-lg-6 col-md-12 col-sm-12">
@@ -85,15 +87,7 @@ function getCountryPage({
       </div>
       <div class="col-12">
         <div class="p-3">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19189938.68788181!2d42.59312076257847!3d9.096849335041732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x166d5a3f9dba8565%3A0x17c208f02f120efa!2z0K3RgNC40YLRgNC10Y8!5e0!3m2!1sru!2s!4v1709404795579!5m2!1sru!2s"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <a type="button" href=${maps.googleMaps} target="_blank" class="btn btn-outline-secondary">See on map</a>
         </div>
       </div>
     </div>
